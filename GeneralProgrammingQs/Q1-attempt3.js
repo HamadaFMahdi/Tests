@@ -1,25 +1,18 @@
+// I decided to take a different approach
+// instead of a general program for the sum of any amount of 
+// even numbers. I will only focus on getting the firs 100.
+
 var Big = require('./big.js');
 
-// Recursive function that will find the nth value of the Fibonacci sequence
-// for small values of n
-function fibonacciNthGeneratorSmall (n) {
-    if (n == 0) {
-        return 1;
-    } else if (n == 1) {
-        return 1;
-    } else {
-        return fibonacciNthGenerator (n-1) + fibonacciNthGenerator (n-2);
-    }
-}
+// According to the theorem we need the 3n+1th term.
+const nthValueForTheorem = (3*100)+1;
 
-// Recursive function that will find the nth value of the Fibonacci sequence
-// for larger values of n, according to the theorem.
-function fibonacciNthGeneratorLarge (n) {
+function fibonacci301stTerm () {
     five = new Big(5);
     phi = five.sqrt().plus(1).div(2);
 
-    const firstTerm = phi.pow(n).div(five.sqrt()).round();
-    const secondTerm = phi.pow(n-1).div(five.sqrt()).round();    
+    const firstTerm = phi.pow(nthValueForTheorem).div(five.sqrt()).round();
+    const secondTerm = phi.pow(nthValueForTheorem-1).div(five.sqrt()).round();    
 
     z = firstTerm.plus(secondTerm);  
 
@@ -32,24 +25,17 @@ function fibonacciNthGeneratorLarge (n) {
 // The sum of the evens up to n of a Fibonacci sequence corresponds to 
 // (x-1)/2
 
-function sumOfEvenFibonacci (n) {
-    if( n < 10 ) {
-        const x = fibonacciNthGeneratorSmall(3*n+1);
-        const sumOfEvens = (x-1)/2;
+function sumOfHundredEvenFibonacci () {
+       
+    const x = fibonacci301stTerm();
+    const sum = x.minus(1).div(2);
 
-        return sumOfEvens
-    } else {
-        const x = fibonacciNthGeneratorLarge(3*n+1);
-        const sumOfEvens = x.minus(1).div(2);
-
-        return sumOfEvens.toString();
-    }
+    return sum.toString();
+    
 }
 
 // -------------------------------------------------------- //
 
 // Main:
 
-console.log(sumOfEvenFibonacci(100));
-console.log(sumOfEvenFibonacci(15));
-// console.log(sumOfEvenFibonacci(50));
+console.log(sumOfHundredEvenFibonacci());
