@@ -43,7 +43,9 @@
    
    __However__, there was an issue. When it came to large numbers. JavaScript began to round them weirdly and I wasn't happy with the result.
 ### <a name="gq1-a3"> Q1 - Attempt 3</a>
-   Then, after some more brief research I decided to implement big.js which allowed me to manipulate the large numbers better. However, I still wasn't able to get the full answer as it was 63 digits long (apparently, assuming I got it correct). 
+   Then, after some more brief research I decided to implement big.js which allowed me to manipulate large numbers more accurately.  
+   I also decided to change my approach. Rather than going for a general solution to sum any amount of even Fibonacci sequence terms, I stuck to only finding the sum of the first 100.  
+   However, I still wasn't able to get the full answer as it was 63 digits long. 
 ### <a name="gq2"> Q2</a>
    With regards to question 2, I have not studies computer science properly except for one module at uni which wasn't extremely thorough. However, I am extremely keen on learning more and solidifying my fundementals God willing!
 ### <a name="gq3"> Q3</a>
