@@ -1,5 +1,4 @@
-// // I will assume both lists are sorted in ASCENDING order
-// // as per the example given
+// // The output array must be in Ascending order
 
 // // I will also assume that the length of the final array must 
 // // always be the same as the sum of the two initial arrays
