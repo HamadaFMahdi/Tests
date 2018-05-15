@@ -49,5 +49,5 @@ function sumOfEvenFibonacci (num) {
 // Main:
 
 console.log(sumOfEvenFibonacci(10));
-// sumOfEvenFibonacci(15);
-// sumOfEvenFibonacci(50);
+// console.log(sumOfEvenFibonacci(15));
+// console.log(sumOfEvenFibonacci(100));

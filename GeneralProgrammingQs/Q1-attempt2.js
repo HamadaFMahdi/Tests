@@ -1,14 +1,26 @@
+// Here I have implented the two theorems. Please check the readme.md
+
 // Recursive function that will find the nth value of the Fibonacci sequence
-function fibonacciNthGenerator (n) {
+// for small n (n < 10).
+function fibonacciNthGeneratorSmall (n) {
     if (n == 0) {
         return 1;
     } else if (n == 1) {
         return 1;
     } else {
-        return fibonacciNthGenerator (n-1) + fibonacciNthGenerator (n-2);
+        return fibonacciNthGeneratorSmall (n-1) + fibonacciNthGeneratorSmall (n-2);
     }
 }
 
+// Recursive function that will find the nth value of the Fibonacci sequence
+// for large n (n >= 10).
+function fibonacciNthGeneratorLarge (n) {
+    const phi = (1+Math.sqrt(5))/2;
+    const firstTerm = Math.round(Math.pow(phi, n)/Math.sqrt(5));
+    const secondTerm = Math.round(Math.pow(phi, n-1)/Math.sqrt(5));
+
+    return firstTerm+secondTerm;
+}
 
 // let x = the 3n+1 term of a Fibonacci sequence 
 // where n is the number of even terms we want to add up
@@ -17,19 +29,27 @@ function fibonacciNthGenerator (n) {
 // (x-1)/2
 
 function sumOfEvenFibonacci (n) {
-    // This is what is delaying the program now
-    const x = fibonacciNthGenerator(3*n+1);
-    const sumOfEvens = (x-1)/2;
+    if( n < 10 ) {
 
-    return sumOfEvens
-    
+        const x = fibonacciNthGeneratorSmall(3*n+1);
+        const sumOfEvens = (x-1)/2;
+
+        return sumOfEvens
+    } else {
+
+        // This is what is delaying the program now
+        const x = fibonacciNthGeneratorLarge(3*n+1);
+        const sumOfEvens = (x-1)/2;
+
+        return sumOfEvens
+    }
 }
 
-// -------------------------------------------------------- //
+// --------------------------------------------------------------- //
 
 // Main:
 
-console.log(sumOfEvenFibonacci(2));
 console.log(sumOfEvenFibonacci(10));
-// sumOfEvenFibonacci(15);
-// sumOfEvenFibonacci(50);
+// console.log(sumOfEvenFibonacci(15));
+// console.log(sumOfEvenFibonacci(100));
+
