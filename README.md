@@ -3,9 +3,9 @@
 ## Contents
 
 1. [__General Programming Questions__](#t1)
-   * [Q1 - attempt1](#gq1-a1)
-   * [Q1 - attempt2](#gq1-a2)
-   * [Q1 - attempt3](#gq1-a3)
+   * [Q1 - Attempt 1](#gq1-a1)
+   * [Q1 - Attempt 2](#gq1-a2)
+   * [Q1 - Attempt 3](#gq1-a3)
    * [Q2](#gq2)
    * [Q3](#gq3)
    * [Q4](#gq4)
@@ -22,11 +22,11 @@
 
 ## <a name="t1"> __1. General Programming Questions__</a>
 
-### <a name="gq1-a1"> Q1 - attempt1</a>
+### <a name="gq1-a1"> Q1 - Attempt 1</a>
    In my first attempt I realised that every third value is even.
    So I just tried to hard code it at first by finding the even terms of the fibonacci sequence then adding them up.  
    This obviously isn't the most efficient and wouldn't give me the sum of the first 100 even terms quick enough!
-### <a name="gq1-a2"> Q1 - attempt2</a>
+### <a name="gq1-a2"> Q1 - Attempt 2</a>
    So, I began researching on Maths Stack exchange, I did __not__ want to cheat! I was looking for a theorem that I could code up and then I found this: [Closed form for the sum of even fibonacci numbers?](https://math.stackexchange.com/questions/323058/closed-form-for-the-sum-of-even-fibonacci-numbers?utm_medium=organic&utm_source=google_rich_qa&utm_campaign=google_rich_qa) More, specifically:   
    
 ![alt text](https://github.com/HamadaFMahdi/Tests/blob/master/Screen%20Shot%202018-05-15%20at%2001.31.58.png?raw=true)
@@ -42,7 +42,7 @@
    I defined two functions, one that calculated the nth term value for n < 10 and the other for the rest. This is due to the n > 6 condition placed on the theorem.  
    
    __However__, there was an issue. When it came to large numbers. JavaScript began to round them weirdly and I wasn't happy with the result.
-### <a name="gq1-a3"> Q1 - attempt3</a>
+### <a name="gq1-a3"> Q1 - Attempt 3</a>
    Then, after some more brief research I decided to implement big.js which allowed me to manipulate the large numbers better. However, I still wasn't able to get the full answer as it was 63 digits long (apparently, assuming I got it correct). 
 ### <a name="gq2"> Q2</a>
    With regards to question 2, I have not studies computer science properly except for one module at uni which wasn't extremely thorough. However, I am extremely keen on learning more and solidifying my fundementals God willing!
