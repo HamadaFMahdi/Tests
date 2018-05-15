@@ -48,6 +48,6 @@ function sumOfEvenFibonacci (num) {
 
 // Main:
 
-console.log(threeNPlusOneGenerator(100));
+console.log(sumOfEvenFibonacci(10));
 // sumOfEvenFibonacci(15);
 // sumOfEvenFibonacci(50);
